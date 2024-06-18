@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Logo="ExpressAppLogo">
+  <BOModel>
+    <Class Name="CRM.Module.BusinessObjects.Company" DefaultDetailViewImage="BO_Project">
+      <AppearanceRules>
+        <AppearanceRule Id="BackgroundItem" BackColor="224, 224, 224" TargetItems="Company" IsNewNode="True" />
+        <AppearanceRule Id="ShippingAddressRule" Criteria="[ShipToBilling] = True" TargetItems="ShippingAddress" Visibility="Hide" IsNewNode="True" />
+      </AppearanceRules>
+    </Class>
+    <Class Name="CRM.Module.BusinessObjects.Employee" DefaultDetailViewImage="BO_Employee" />
+    <Class Name="CRM.Module.BusinessObjects.Project" DefaultDetailViewImage="BO_Contract" />
+  </BOModel>
+  <NavigationItems NavigationStyle="Accordion" DefaultChildItemsDisplayStyle="List" DefaultLeafImageName="State_Validation_Valid">
+    <Items>
+      <Item Id="Default">
+        <Items>
+          <Item Id="ProjectTasks_ListView" Removed="True" />
+        </Items>
+      </Item>
+      <Item Id="Project">
+        <Items>
+          <Item Id="ProjectTasks_ListView" ViewId="ProjectTasks_ListView" ObjectKey="" ImageName="BO_Contract" IsNewNode="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Options UIType="TabbedMDI" FormStyle="Ribbon" ShowTabImage="False" Skin="The Bezier" />
+  <SchemaModules>
+    <SchemaModule Name="SchedulerModuleBase" Version="23.2.6.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerWindowsFormsModule" Version="23.2.6.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="23.2.6.0" IsNewNode="True" />
+    <SchemaModule Name="SystemWindowsFormsModule" Version="23.2.6.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="Employee_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="19.58997722095672">
+            <LayoutGroup Id="Employee" RelativeSize="100">
+              <LayoutGroup Id="Employee_col1" RelativeSize="50">
+                <LayoutItem Id="FirstName" RelativeSize="29.032258064516128" />
+                <LayoutItem Id="LastName" RelativeSize="20.967741935483872" />
+                <LayoutItem Id="PhoneNumber" RelativeSize="20.967741935483872" />
+                <LayoutItem Id="EmailAdress" ViewItem="EmailAdress" Index="3" RelativeSize="29.032258064516128" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Employee_col2" Caption="Employee_col2" RelativeSize="50" TextAlignMode="AlignWithChildren">
+                <LayoutItem Id="Image" Index="0" RelativeSize="100" ShowCaption="False" SizeConstraintsType="Custom" MinSize="524, 40" MaxSize="524, 0" />
+                <LayoutItem Id="EmailAdress" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Project_Group" TextAlignMode="AlignWithChildren" Direction="Vertical" RelativeSize="80.41002277904327">
+            <LayoutItem Id="Project" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

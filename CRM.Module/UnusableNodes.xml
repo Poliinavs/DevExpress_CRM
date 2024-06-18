@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="CRM.Module.BusinessObjects.ProjectTask" ImageName="AlignFloatingObjectTopRight">
+      <AppearanceRules Id="AppearanceRules">
+        <AppearanceRule Id="StatusCompleted" BackColor="192, 255, 255" Criteria="[Status] = ##Enum#CRM.Module.BusinessObjects.Status,Completed#" TargetItems="*" />
+        <AppearanceRule Id="StatusInProgress" BackColor="255, 255, 192" Criteria="[Status] = ##Enum#CRM.Module.BusinessObjects.Status,InProgress#" TargetItems="*" />
+        <AppearanceRule Id="StatusToDoGreen" BackColor="192, 255, 192" TargetItems="*" Criteria="[Status] = ##Enum#CRM.Module.BusinessObjects.Status,ToDO#" />
+      </AppearanceRules>
+    </Class>
+  </BOModel>
+  <Views Id="Views">
+    <DetailView Id="ProjectTask_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="ProjectTask" RelativeSize="18.803418803418804">
+              <LayoutGroup Id="ProjectTask_col1" RelativeSize="49.78947368421053">
+                <LayoutItem Id="TaskName" RelativeSize="36.170212765957444" />
+                <LayoutItem Id="StartDate" RelativeSize="27.659574468085108" Index="1" />
+                <LayoutGroup Id="Autoa0bb92e2-2c18-4a17-acbd-36c398ea611c" ShowCaption="False" Caption="" Direction="Horizontal" Index="2" RelativeSize="36.170212765957444">
+                  <LayoutItem Id="Description" ViewItem="Description" Index="0" RelativeSize="97.67441860465117" />
+                  <LayoutItem Id="Item1" Index="1" RelativeSize="2.3255813953488373" />
+                </LayoutGroup>
+                <LayoutItem Id="Description" RelativeSize="27.083333333333332" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="ProjectTask_col2" RelativeSize="50.21052631578947">
+                <LayoutItem Id="EndDate" RelativeSize="36.170212765957444" />
+                <LayoutItem Id="Status" RelativeSize="27.659574468085108" />
+                <LayoutItem Id="Level" RelativeSize="36.170212765957444" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutItem Id="Item2" Index="1" RelativeSize="81.19658119658119" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="Project">
+        <Items Id="Items">
+          <Item Id="ProjectTask_ListView" ViewId="ProjectTask_ListView" />
+        </Items>
+      </Item>
+      <Item Id="Default">
+        <Items Id="Items">
+          <Item Id="ProjectTask_ListView" Removed="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

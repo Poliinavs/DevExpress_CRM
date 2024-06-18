@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="23.2.6.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="Report1" DisplayName="Proj" PageWidth="850" PageHeight="1100" Version="23.2" FilterString="[Budget] &gt; ?minValue" DataSource="#Ref-0">
+  <Extensions>
+    <Item1 Ref="2" Key="DataSerializationExtension" Value="XtraReport" />
+    <Item2 Ref="3" Key="DataEditorExtension" Value="XtraReport" />
+    <Item3 Ref="4" Key="ParameterEditorExtension" Value="XtraReport" />
+  </Extensions>
+  <Parameters>
+    <Item1 Ref="6" Description="minValue:" ValueInfo="0" Name="minValue" Type="#Ref-5" />
+  </Parameters>
+  <Bands>
+    <Item1 Ref="7" ControlType="TopMarginBand" Name="TopMargin">
+      <Controls>
+        <Item1 Ref="8" ControlType="XRPageInfo" Name="pageInfo2" TextFormatString="Page {0} of {1}" TextAlignment="TopRight" SizeF="325,23" LocationFloat="324.99994,53.833313" StyleName="PageInfo" />
+      </Controls>
+    </Item1>
+    <Item2 Ref="9" ControlType="BottomMarginBand" Name="BottomMargin" />
+    <Item3 Ref="10" ControlType="ReportHeaderBand" Name="ReportHeader" HeightF="60">
+      <Controls>
+        <Item1 Ref="11" ControlType="XRLabel" Name="label1" Text="Project" SizeF="650,24.194334" LocationFloat="0,0" StyleName="Title" />
+      </Controls>
+    </Item3>
+    <Item4 Ref="12" ControlType="GroupHeaderBand" Name="GroupHeader1" GroupUnion="WithFirstDetail" HeightF="28">
+      <Controls>
+        <Item1 Ref="13" ControlType="XRTable" Name="table1" SizeF="650,27.999998" LocationFloat="0,0">
+          <Rows>
+            <Item1 Ref="14" ControlType="XRTableRow" Name="tableRow1" Weight="1">
+              <Cells>
+                <Item1 Ref="15" ControlType="XRTableCell" Name="tableCell1" Weight="0.2468751116474142" Text="Budget" TextAlignment="MiddleRight" StyleName="DetailCaption1" Borders="None">
+                  <StylePriority Ref="16" UseBorders="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="17" ControlType="XRTableCell" Name="tableCell3" Weight="0.24961245596075882" Text="Project Name" StyleName="DetailCaption1" />
+                <Item3 Ref="18" ControlType="XRTableCell" Name="tableCell4" Weight="0.247129633976863" Text="Start Time" StyleName="DetailCaption1" />
+              </Cells>
+            </Item1>
+          </Rows>
+        </Item1>
+      </Controls>
+    </Item4>
+    <Item5 Ref="19" ControlType="DetailBand" Name="Detail" HeightF="25">
+      <Controls>
+        <Item1 Ref="20" ControlType="XRTable" Name="table2" SizeF="649.99994,25" LocationFloat="0,0" OddStyleName="DetailData3_Odd">
+          <Rows>
+            <Item1 Ref="21" ControlType="XRTableRow" Name="tableRow2" Weight="11.5">
+              <Cells>
+                <Item1 Ref="22" ControlType="XRTableCell" Name="tableCell6" Weight="0.24687514722007992" TextAlignment="MiddleRight" StyleName="DetailData1" Borders="None">
+                  <ExpressionBindings>
+                    <Item1 Ref="23" EventName="BeforePrint" PropertyName="Text" Expression="[Budget]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="24" UseBorders="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="25" ControlType="XRTableCell" Name="tableCell8" Weight="0.2496124321256232" StyleName="DetailData1">
+                  <ExpressionBindings>
+                    <Item1 Ref="26" EventName="BeforePrint" PropertyName="Text" Expression="[ProjectName]" />
+                  </ExpressionBindings>
+                </Item2>
+                <Item3 Ref="27" ControlType="XRTableCell" Name="tableCell9" Weight="0.247129633976863" StyleName="DetailData1">
+                  <ExpressionBindings>
+                    <Item1 Ref="28" EventName="BeforePrint" PropertyName="Text" Expression="[StartTime]" />
+                  </ExpressionBindings>
+                </Item3>
+              </Cells>
+            </Item1>
+          </Rows>
+        </Item1>
+      </Controls>
+    </Item5>
+  </Bands>
+  <StyleSheet>
+    <Item1 Ref="29" Name="Title" BorderStyle="Inset" Padding="6,6,0,0,100" Font="Arial, 14.25pt" ForeColor="255,76,70,62" BackColor="Transparent" BorderColor="Black" Sides="None" StringFormat="Near;Near;0;None;Character;Default" BorderWidthSerializable="1" />
+    <Item2 Ref="30" Name="DetailCaption1" BorderStyle="Inset" Padding="6,6,0,0,100" Font="Arial, 8.25pt, style=Bold" ForeColor="255,76,70,62" BackColor="255,227,202,166" BorderColor="White" Sides="Left" StringFormat="Near;Center;0;None;Character;Default" TextAlignment="MiddleLeft" BorderWidthSerializable="2" />
+    <Item3 Ref="31" Name="DetailData1" BorderStyle="Inset" Padding="6,6,0,0,100" Font="Arial, 8.25pt" ForeColor="Black" BorderColor="Transparent" Sides="Left" StringFormat="Near;Center;0;None;Character;Default" TextAlignment="MiddleLeft" BorderWidthSerializable="2" />
+    <Item4 Ref="32" Name="DetailData3_Odd" BorderStyle="Inset" Padding="6,6,0,0,100" Font="Arial, 8.25pt" ForeColor="Black" BackColor="255,249,245,241" BorderColor="Transparent" Sides="None" StringFormat="Near;Center;0;None;Character;Default" TextAlignment="MiddleLeft" BorderWidthSerializable="1" />
+    <Item5 Ref="33" Name="PageInfo" BorderStyle="Inset" Padding="6,6,0,0,100" Font="Arial, 8.25pt, style=Bold" ForeColor="255,76,70,62" StringFormat="Near;Near;0;None;Character;Default" />
+  </StyleSheet>
+  <ComponentStorage>
+    <Item1 Ref="0" Name="collectionDataSource1" ObjectTypeName="CRM.Module.BusinessObjects.Project" ObjectType="DevExpress.Persistent.Base.ReportsV2.CollectionDataSource,DevExpress.Persistent.Base.v23.2" TopReturnedRecords="0">
+      <Sorting Ref="34">
+        <Sorting>
+          <Item1 PropertyName="[Budget]" Direction="Ascending" />
+        </Sorting>
+      </Sorting>
+    </Item1>
+  </ComponentStorage>
+  <ObjectStorage>
+    <Item1 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v23.2" Ref="5" Content="System.Double" Type="System.Type" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>

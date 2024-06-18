@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="DevExpress.Data" Version="23.2.6" />
+    <PackageReference Include="DevExtreme.AspNet.Data" Version="4.0.0" />
+    <PackageReference Include="EPPlus" Version="7.1.3" />
+    <PackageReference Include="eXpandLib" Version="23.2.605" />
+  </ItemGroup>
+
+</Project>

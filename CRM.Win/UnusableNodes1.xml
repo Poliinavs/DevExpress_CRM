@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="CRM.Module.BusinessObjects.ProjectTask" DefaultDetailViewImage="FloatingObjectAlignment" />
+  </BOModel>
+  <Views Id="Views">
+    <DetailView Id="ProjectTask_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="ProjectTask" RelativeSize="100" Direction="Vertical">
+              <LayoutGroup Id="ProjectTask_col1" RelativeSize="100">
+                <LayoutItem Id="TaskName" RelativeSize="4.3478260869565215" />
+                <LayoutItem Id="Description" RelativeSize="3.140096618357488" />
+                <LayoutItem Id="Status" ViewItem="Status" Index="2" RelativeSize="3.140096618357488" />
+                <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="3" RelativeSize="89.3719806763285" Caption="deadlines">
+                  <LayoutItem Id="EndDate" ViewItem="EndDate" Index="0" RelativeSize="5.142857142857143" />
+                  <LayoutItem Id="StartDate" ViewItem="StartDate" Index="1" RelativeSize="94.85714285714286" />
+                </LayoutGroup>
+                <LayoutItem Id="StartDate" Index="4" RelativeSize="82.92682926829268" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="ProjectTask_col2" Caption="ProjectTask_col2" RelativeSize="50.04775549188157" Removed="True">
+                <LayoutItem Id="Status" Index="0" RelativeSize="100" Removed="True" />
+                <LayoutItem Id="EndDate" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>
