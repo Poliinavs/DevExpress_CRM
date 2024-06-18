@@ -1,0 +1,83 @@
+# Ignore DevExpress binaries and build artifacts
+[Dd]x*
+*.pdb
+*.dll
+*.exe
+*.log
+*.obj
+*.pch
+*.user
+*.iobj
+*.idb
+*.pdb
+*.dll
+*.exe
+*.res
+*.pch
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.ncb
+*.log
+*.zip
+*.opendb
+*.opensdf
+*.sdf
+*.pyc
+*.sqlite3
+*.sln.docstates
+
+# Ignore Visual Studio generated files
+.vs/
+*.suo
+*.user
+*.sln.docstates
+*.userprefs
+*_i.c
+*_p.c
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.log
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.vspx
+
+# Ignore packages folder
+packages/
+
+# Ignore NuGet artifacts
+*.nupkg
+*.paket.template
+paket-files/
+
+# Ignore Resharper and Rider specific files
+_ReSharper*/
+*.DotSettings.user
+
+# Ignore Xamarin specific files
+bin/
+obj/
+
+# Ignore build output and debug folders
+[Bb]in/
+[Oo]bj/
+
+# Ignore any other DevExpress specific files or folders based on your project structure
